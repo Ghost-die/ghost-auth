@@ -1,0 +1,42 @@
+{
+    "name": "ghost/ghost-auth",
+    "description": "基于laravel/socialite 开发的个人Oauth 2.0授权登陆.",
+    "keywords": ["oauth", "laravel"],
+    "license": "MIT",
+    "homepage": "https://github.com/",
+    "authors": [
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "~6.0",
+        "illuminate/http": "~5.7.0|~5.8.0|^6.0|^7.0",
+        "illuminate/support": "~5.7.0|~5.8.0|^6.0|^7.0",
+        "league/oauth1-client": "~1.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Ghost\\GhostAuth\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ghost\\GhostAuth\\GhostAuthServiceProvider"
+            ],
+            "aliases": {
+                "ghostAuth": "Ghost\\GhostAuth\\Facades\\GhostAuth"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
